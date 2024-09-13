@@ -2,10 +2,12 @@ package javaSwing.theBasicWindowInSwing.swingComponents.introductionToSwingCompo
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class HelloFrame extends JFrame{
 
@@ -30,6 +32,16 @@ public class HelloFrame extends JFrame{
         greenPanel.setLayout(new BorderLayout());
         greenPanel.setBackground(Color.GREEN);
         add(greenPanel);
+
+        JLabel helloLabel = new JLabel("Hello");
+        helloLabel.setBounds(50, 20, 100, 30);
+        helloLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        helloLabel.setVerticalAlignment(SwingConstants.CENTER);
+
+        Font font = new Font("Courier", Font.BOLD, 12);
+        helloLabel.setFont(font);
+        helloLabel.setFont(helloLabel.getFont().deriveFont(16f));
+        greenPanel.add(helloLabel);
 
         setVisible(true);
     }
