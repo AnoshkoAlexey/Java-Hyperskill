@@ -3,9 +3,6 @@ package javaSwing.theBasicWindowInSwing.swingComponents.introductionToSwingCompo
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -53,16 +50,13 @@ public class HelloFrame extends JFrame{
 
         setVisible(true);
 
-        acceptButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String helloText = "Hello";
-                String name = nameTextField.getText();
-                if (name != null && name.trim().length() > 0) {
-                    helloText += String.format(", %s", name);
-                }
-                helloLabel.setText(helloText);
+        acceptButton.addActionListener(e-> {
+            String helloText = "Hello";
+            String name = nameTextField.getText();
+            if (name != null && name.trim().length() > 0) {
+                helloText += String.format(", %s", name);
             }
+            helloLabel.setText(helloText);   
         });
     }
     
