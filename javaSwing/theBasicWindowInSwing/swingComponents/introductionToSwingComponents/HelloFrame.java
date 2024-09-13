@@ -1,6 +1,7 @@
 package javaSwing.theBasicWindowInSwing.swingComponents.introductionToSwingComponents;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class HelloFrame extends JFrame{
 
@@ -11,6 +12,11 @@ public class HelloFrame extends JFrame{
         setLocationRelativeTo(null);
         setLayout(null);
         setVisible(true);
+
+        JLabel nameLabel = new JLabel();
+        nameLabel.setText("Your Name");
+        nameLabel.setBounds(40, 20, 100, 30);
+        add(nameLabel);
     }
     
     public static void main(String[] args) {
