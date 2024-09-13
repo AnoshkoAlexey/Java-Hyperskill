@@ -20,13 +20,22 @@ public class MenuExample extends JFrame {
         fileMenu.setMnemonic(KeyEvent.VK_F);
         menuBar.add(fileMenu);
 
-        JMenuItem newMenuItem = new JMenuItem("New");
+        JMenu newMenu = new JMenu("New");
+        JMenuItem textFileMenuItem = new JMenuItem("Text File");
+        JMenuItem imgFileMenuItem = new JMenuItem("Image File");
+        JMenuItem folderMenuItem = new JMenuItem("Folder");
+
+        newMenu.add(textFileMenuItem);
+        newMenu.add(imgFileMenuItem);
+        newMenu.add(folderMenuItem);
+        
+        fileMenu.add(newMenu);
+
         JMenuItem openMenuItem = new JMenuItem("Open");
         JMenuItem closeMenuItem = new JMenuItem("Close");
         JMenuItem closeAllMenuItem = new JMenuItem("Close All");
         JMenuItem exitMenuItem = new JMenuItem("Exit");
 
-        fileMenu.add(newMenuItem);
         fileMenu.add(openMenuItem);
         fileMenu.add(closeMenuItem);
         fileMenu.add(closeAllMenuItem);
@@ -35,7 +44,6 @@ public class MenuExample extends JFrame {
         fileMenu.add(exitMenuItem);
 
         setVisible(true);
-
     }
 
     public static void main(String[] args) {
