@@ -1,5 +1,7 @@
 package javaSwing.swingComponents.JMenu;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -42,6 +44,12 @@ public class MenuExample extends JFrame {
 
         fileMenu.addSeparator();
         fileMenu.add(exitMenuItem);
+
+        exitMenuItem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent event) {
+                System.exit(0);
+            }
+        });
 
         setVisible(true);
     }
