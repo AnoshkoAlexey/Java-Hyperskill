@@ -3,6 +3,7 @@ package javaSwing.theBasicWindowInSwing.swingComponents.introductionToSwingCompo
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -42,6 +43,10 @@ public class HelloFrame extends JFrame{
         helloLabel.setFont(font);
         helloLabel.setFont(helloLabel.getFont().deriveFont(16f));
         greenPanel.add(helloLabel);
+
+        JButton acceptButton = new JButton("Accept");
+        acceptButton.setBounds(100, 70, 100, 30);
+        add(acceptButton);
 
         setVisible(true);
     }
