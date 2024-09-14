@@ -1,8 +1,6 @@
 package javaSwing.swingComponents.JComboBox;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Country {
@@ -13,12 +11,9 @@ public class Country {
         JFrame frame = createFrame();
         JComboBox<String> comboBox = createComboBox();
 
-        comboBox.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("Combobox value was changed");
-            }
-        });
+        comboBox.addActionListener(actionEvent -> 
+            System.out.println("Combobox value was changed")
+        );
 
         frame.add(comboBox);
         frame.setVisible(true);
