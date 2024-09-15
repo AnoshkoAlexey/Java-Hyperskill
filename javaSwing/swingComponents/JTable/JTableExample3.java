@@ -31,6 +31,7 @@ public class JTableExample3 extends JFrame {
         this.add(sp);
 
         tableModel.setValueAt("James", 0,0);
+        table.setAutoCreateRowSorter(true);
     }
 
     class CustomListener implements TableModelListener {
