@@ -4,9 +4,11 @@ import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.RowFilter;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
 
 public class JTableExample3 extends JFrame {
 
@@ -31,7 +33,12 @@ public class JTableExample3 extends JFrame {
         this.add(sp);
 
         tableModel.setValueAt("James", 0,0);
-        table.setAutoCreateRowSorter(true);
+        // table.setAutoCreateRowSorter(true);
+
+        final TableRowSorter<TableModel> sorter = new TableRowSorter<>(tableModel);
+        table.setRowSorter(sorter);
+        sorter.setRowFilter(RowFilter.regexFilter("James"));
+        
     }
 
     class CustomListener implements TableModelListener {
