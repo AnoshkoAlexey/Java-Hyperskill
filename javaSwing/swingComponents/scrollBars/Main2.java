@@ -11,6 +11,12 @@ public class Main2 {
         JTextArea textArea = new JTextArea(5, 5);
         JScrollPane scrollPane = new JScrollPane(textArea);
 
+        scrollPane
+            .setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+
+        scrollPane
+            .setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+            
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300, 200);
 
