@@ -24,6 +24,12 @@ public class MyTableModel extends AbstractTableModel {
     }
 
     @Override
+    public void setValueAt(Object value, int rowIndex, int columnIndex) {
+        data[rowIndex][columnIndex] = value;
+        fireTableCellUpdated(rowIndex, columnIndex);
+    }
+
+    @Override
     public String getColumnName(int columnIndex) {
         return columns[columnIndex];
     }
