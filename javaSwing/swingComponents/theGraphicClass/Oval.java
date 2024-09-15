@@ -23,6 +23,12 @@ public class Oval extends JFrame {
         super.paint(g);
         g.setColor(Color.BLUE);
         g.fillOval(250, 250, 50, 50);
+        g.drawOval(50, 50, 50, 50);
+
+        g.drawLine(100, 70, 200, 200);
+        g.drawRect(300, 300, 100, 100);
+
+        g.fillRect(50, 300, 100, 100);
     }
     
 }
