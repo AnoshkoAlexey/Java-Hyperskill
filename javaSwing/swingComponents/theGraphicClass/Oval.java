@@ -21,7 +21,8 @@ public class Oval extends JFrame {
 
     public void paint(Graphics g) {
         super.paint(g);
-        g.drawOval(250, 250, 50, 50);
+        g.setColor(Color.BLUE);
+        g.fillOval(250, 250, 50, 50);
     }
     
 }
