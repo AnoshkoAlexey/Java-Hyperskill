@@ -10,6 +10,7 @@ public class Controller {
     public Controller(Model model, View view) {
         this.model = model;
         this.view = view;
+        view.setText(String.valueOf(model.getNumber()));
     }
 
     public void control() {
