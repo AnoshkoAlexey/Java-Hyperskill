@@ -1,7 +1,7 @@
 package javaSwing.layoutManagers;
 
-import javax.swing.*;
 import java.awt.*;
+import javax.swing.*;
 
 public class BorderLayoutExample extends JFrame {
 
@@ -13,11 +13,15 @@ public class BorderLayoutExample extends JFrame {
         setLocationRelativeTo(null);
 
         setLayout(new BorderLayout());
-        add(new JButton("North"), java.awt.BorderLayout.NORTH);
-        add(new JButton("East"), java.awt.BorderLayout.EAST);
-        add(new JButton("South"), java.awt.BorderLayout.SOUTH);
-        add(new JButton("West"), java.awt.BorderLayout.WEST);
-        add(new JButton("Center"), java.awt.BorderLayout.CENTER);
+        JPanel panel = new JPanel();
+        panel.add(new JButton("One"));
+        panel.add(new JButton("Two"));
+        add(panel, BorderLayout.NORTH);
+        add(panel, BorderLayout.NORTH);
+        add(new JButton("East"), BorderLayout.EAST);
+        add(new JButton("South"), BorderLayout.SOUTH);
+        add(new JButton("West"), BorderLayout.WEST);
+        add(new JButton("Center"), BorderLayout.CENTER);
         
         setVisible(true);      
            
