@@ -19,9 +19,10 @@ public class View {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // window size
         frame.setSize(500, 500);
-        frame.setVisible(true);
+        label.setText("1");
         frame.getContentPane().add(label, BorderLayout.CENTER);
         frame.getContentPane().add(button, BorderLayout.SOUTH);
+        frame.setVisible(true);
     }
     
     public void setText(String str) {
