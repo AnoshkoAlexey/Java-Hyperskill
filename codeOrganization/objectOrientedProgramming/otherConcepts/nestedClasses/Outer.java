@@ -5,8 +5,10 @@ public class Outer {
 
     void someMethod() {
 
+        final int x = 5;
         class LocalInner {
             private void print() {
+                System.out.println("x = " + x);
                 System.out.println("Number = " + Outer.this.number);
             }
         }
