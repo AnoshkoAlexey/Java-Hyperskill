@@ -59,4 +59,13 @@ public class Person {
                 Objects.equals(lastName, person.lastName);
     }
 
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + (firstName == null ? 0 : firstName.hashCode());
+        result = 31 * result + (lastName == null ? 0 : lastName.hashCode());
+        result = 31 * result + age;
+        return result;
+    }
+    
 }
