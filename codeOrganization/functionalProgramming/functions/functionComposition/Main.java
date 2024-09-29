@@ -1,4 +1,5 @@
 package codeOrganization.functionalProgramming.functions.functionComposition;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.IntPredicate;
 
@@ -40,5 +41,8 @@ public class Main {
         System.out.println(isOddAndLessThan11.test(10)); // prints "false"
         System.out.println(isOddAndLessThan11.test(11)); // prints "false"
  
+        Consumer<String> consumer = System.out::println;
+        Consumer<String> doubleConsumer = consumer.andThen(System.out::println);
+        doubleConsumer.accept("Hi!");
     }
 }
