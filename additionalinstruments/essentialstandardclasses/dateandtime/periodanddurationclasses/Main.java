@@ -99,5 +99,14 @@ public class Main {
         System.out.println(duration6.plus(Duration.of(10, ChronoUnit.MINUTES))); // PT1H40M
         System.out.println(duration6.minus(Duration.of(10, ChronoUnit.MINUTES))); // PT1H20M
         System.out.println(duration6); // PT1H30M
+
+        // Examples from exercises
+        Duration duration7 = Duration.of(75, ChronoUnit.MINUTES);
+        System.out.println(duration7.addTo(LocalTime.of(20, 2, 22)));
+
+        // Answer: 21:17:22
+
+        Period period6 = Period.of(1, 1, 1);
+        System.out.println(period6.addTo(LocalDate.of(2000, 2, 22)));
     }
 }
