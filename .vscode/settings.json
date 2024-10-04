@@ -2,5 +2,6 @@
     "java.debug.settings.onBuildFailureProceed": false,
     "cSpell.words": [
         "additionalinstruments"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
