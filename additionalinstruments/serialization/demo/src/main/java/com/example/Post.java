@@ -1,5 +1,6 @@
 package com.example;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -41,6 +42,11 @@ public class Post {
 
     public List<String> getComments() {
         return comments;
+    }
+
+    @JsonProperty("createdDate")
+    public String getReadableCreatedDate() {
+        return (new SimpleDateFormat("dd-MM-yyyy")).format(createDate);
     }
     
 }
