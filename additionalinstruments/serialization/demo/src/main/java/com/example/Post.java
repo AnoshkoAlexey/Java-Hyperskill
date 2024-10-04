@@ -3,8 +3,12 @@ package com.example;
 import java.util.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Post {
     private int id;
+
+    @JsonProperty("postedAt")
     private Date createDate;
     private String content;
     private int likes;
